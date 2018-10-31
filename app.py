@@ -11,6 +11,14 @@ def hell(name=None):
     return "List of task"
 
 
+
+
+@app.route('/form')
+def form(name=None):
+#    return "<h1>Hello World!</h1>"
+    return render_template('form.html')
+
+
 #@app.route('/<name>')
 #def hello_name(name):
 #    return "Hello {}!".format(name)
