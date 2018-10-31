@@ -8,8 +8,11 @@ app = Flask(__name__)
 def hell(name=None):
 #    return "<h1>Hello World!</h1>"
 #    return render_template('hello.html', name="new user")
-    return "List of task"
-
+#    return "List of task"
+     with open("test.txt","r") as fo:
+        res = fo.read()
+#         fo.flush()
+     return "Here tasks go: " + res
 
 
 
@@ -39,7 +42,7 @@ def hello(name=None):
 def login(): 
    if request.method == 'POST': 
       user = request.form['nm'] 
-      with open("test.txt","w") as fo:
+      with open("test.txt","a") as fo:
          fo.write(user)
          fo.flush()
       return redirect(url_for('success',name = user)) 
