@@ -5,7 +5,7 @@ from flask import render_template
 
 #, flash, redirect, render_template, request, session, abort
 app = Flask(__name__)
-
+app.debug = True
 
 @app.route('/')
 def hell():
